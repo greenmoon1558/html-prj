@@ -1,0 +1,101 @@
+.block-2.block-wrapper {
+  @include page-block__container();
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-position: left -50px, right -50px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url("../img/fire_left.png"), url("../img/fire_right.png");
+  .main-title {
+    color: $white;
+    font-size: 48px;
+    margin: 40px auto 0;
+    line-height: 52px;
+    text-transform: uppercase;
+    font-family: $fontSansNarrow;
+    font-weight: 700;
+    &--orange {
+      color: $orange;
+    }
+  }
+  .sub-title {
+    margin: 7px auto 25px;
+    color: $white;
+    font-family: $fontSansRegular;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .form-questions {
+    &__wrapper {
+      width: 641px;
+      height: 261px;
+      border-radius: 10px;
+      background-color: $white;
+    }
+    .question {
+        margin: 31px auto 40px;
+        display: flex;
+        justify-content: center;
+      &__ {
+        &number {
+          width: 60px;
+          display: inline-flex;
+          height: 60px;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.1);
+          border-radius: 50%;
+          &__text {
+            color: $black;
+            font-family: $fontSansRegular;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 52px;
+            text-transform: uppercase;
+          }
+        }
+        &text {
+          color: $black;
+          font-family: $fontSansRegular;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 52px;
+          display: inline-block;
+          margin: 0 0 0 15px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .questions-btns__container {
+    text-align: center;
+    .quetions-btn:first-child {
+        margin-right: 20px;
+    }
+    .quetions-btn {
+      width: 250px;
+      border: none;
+      height: 80px;
+      border-radius: 10px;
+      background-color: $orange;
+      color: $white;
+      font-family: $fontSansRegular;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 52px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      &:before {
+        content: " ";
+        margin-top: -15px;
+        margin-left: -5px;
+        border-radius: 0px 0px 50% 50%;
+        display: block;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.15);
+        height: 46px;
+        width: 250px;
+      }
+    }
+  }
+}

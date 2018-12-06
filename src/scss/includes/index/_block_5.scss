@@ -1,0 +1,60 @@
+.block-5 {
+  @include page-block__container();
+  margin: -33px auto 0;
+  .block-wrapper {
+    background-color: $white;
+    height: 443px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: -18px, 0px;
+    background-image: url("../img/doctor.png"), url("../img/block-5-bckg.png");
+    .main-title {
+      color: $black;
+      font-family: $fontSansNarrowBold;
+      font-size: 48px;
+      font-weight: 400;
+      margin: 18px 0 3px 0;
+      text-transform: uppercase;
+      &--orange {
+        color: $orange;
+      }
+    }
+    .container {
+      display: flex;
+      margin-left: 40px;
+      width: 570px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .text {
+        &__ {
+          &container {
+          }
+          &item,
+          &name {
+            margin: 19px 0;
+            color: $black;
+            font-family: $fontSansRegular;
+            font-size: 16px;
+            font-weight: 400;
+          }
+          &name {
+            font-weight: 700;
+            font-style: italic;
+          }
+        }
+      }
+      .signature {
+          margin-right: 62px;
+          margin-top: -10px;
+        &__container {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

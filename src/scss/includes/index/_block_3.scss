@@ -1,0 +1,41 @@
+.block-3 {
+  @include page-block__container();
+  background-position: center;
+  height: 392px;
+  border-radius: 10px;
+  background-color: $white;
+  background-repeat: no-repeat;
+  margin-top: 67px;
+  display: flex;
+  background-image: url("../img/bg+girl.png");
+  .block-wrapper {
+    max-width: 550px;
+    width: 100%;
+    margin: 22px auto 17px 40px;
+    .main-title {
+      margin: 0;
+      letter-spacing: -0.5px;
+      color: $black;
+      font-family: $fontSansNarrowBold;
+      font-size: 48px;
+      line-height: 53px;
+      text-transform: uppercase;
+      &--orange {
+        color: $orange;
+      }
+    }
+    .main-text {
+      color: $black;
+      margin: 22px 0 0 0;
+      font-family: $fontSansRegular;
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: -0.1px;
+      line-height: 26.02px;
+      &--strong {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

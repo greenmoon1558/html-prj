@@ -1,0 +1,57 @@
+$font-stack: -apple-system, BlinkMacSystemFont,Roboto,'Open Sans','Helvetica Neue',sans-serif;
+
+@font-face {
+  font-family: 'PT Sans - Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/PT_Sans-Web-Bold.ttf);
+}
+@font-face {
+  font-family: 'PT Sans - Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/PT_Sans-Web-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "PT Sans - Narrow";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/PT_Sans-Narrow-Web-Regular.ttf);
+}
+@font-face {
+  font-family: "PT Sans - Narrow Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/PT_Sans-Narrow-Web-Bold.ttf);
+}
+
+@import './_vars';
+@import './mixin/_page-block__container';
+@import './includes/_header';
+@import './includes/index/_block_1';
+@import './includes/index/_block_2';
+@import './includes/index/_block_3';
+@import './includes/index/_block_4';
+@import './includes/index/_block_5';
+@import './includes/_footer';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $black;
+  color: $white;
+}

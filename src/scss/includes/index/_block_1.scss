@@ -1,0 +1,310 @@
+.fire-bckg {
+  background-color: $black;
+  background-position: center 40px, center 0px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url("../img/woman_and_man.png"), url("../img/fire_bg.png");
+  @include page-block__container();
+}
+.block-1.block-wrapper {
+  @include page-block__container();
+  .main-title {
+    background-image: $textGoldGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $yellowText;
+    font-family: $fontRobotoCondense;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 0px auto 24px;
+    height: 45px;
+    letter-spacing: 0.4px;
+  }
+  .columns {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 340px 280px 300px;
+    .column {
+      &__ {
+        &title {
+          height: 48px;
+          color: $white;
+          font-family: $fontRoboto;
+          letter-spacing: 0.25px;
+          font-size: 22px;
+          font-weight: 500;
+          margin: 0 0 20px 0;
+        }
+        &list {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          .item {
+            &__ {
+              &img--checkbox {
+                width: 24px;
+                height: 24px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                display: inline-block;
+                border: 1px solid $checkboxBorderColor;
+                background-image: $checkboxBackground;
+                &:before {
+                  content: " ";
+                  width: 9px;
+                  height: 6px;
+                  display: block;
+                  transform: rotate(-45deg);
+                  border: solid $white;
+                  margin: 4px 0 0 5px;
+                  border-width: 0 0 3px 3px;
+                  box-shadow: 0 1px 2px rgba(1, 1, 1, 0.25);
+                }
+              }
+              &text {
+                color: $white;
+                font-family: $fontSansRegular;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18px;
+              }
+            }
+            display: grid;
+            grid-column-gap: 9px;
+            padding: 6px 0;
+            grid-template-rows: 1fr;
+            grid-row-gap: 2px;
+            grid-template-columns: 24px minmax(244px, 244px);
+            border: 1px solid;
+            border-image: linear-gradient(
+              45deg,
+              transparent 0%,
+              rgba(255, 255, 255, 0.6) 21%,
+              rgba(255, 255, 255, 0.6) 40%,
+              transparent 55%
+            );
+            border-image-slice: 1;
+            border-width: 0 0 1px 0;
+            &:last-child {
+              grid-template-columns: 24px minmax(169px, 169px);
+              border: none;
+            }
+          }
+        }
+        &product {
+          &-image {
+            margin-top: 17px;
+            .product__img {
+              display: inline-block;
+              width: 335px;
+              height: 318px;
+            }
+          }
+        }
+        &percentage {
+          display: grid;
+          grid-template-rows: 1fr 95px 40px 60px;
+          grid-row-gap: 10px;
+        }
+        &img--percentage {
+          grid-row: 2;
+        }
+        &text {
+          color: $white;
+          font-family: $fontSansNarrow;
+          font-size: 19px;
+          font-weight: 400;
+          margin: 0;
+          grid-row: 3;
+          text-align: center;
+        }
+      }
+      .timer {
+        display: flex;
+        margin-bottom: 30px;
+        &__ {
+          &clock {
+            margin: 5px 0 0 10px;
+            display: inline-flex;
+          }
+          &item {
+            margin: 0 3px 0 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 46px;
+            height: 52px;
+            box-shadow: 0 2px 3px rgba(27, 27, 27, 0.55),
+              inset 0 1px 2px rgba(255, 255, 255, 0.15);
+            border: 1px solid $white;
+            background-color: $timerBckgColor;
+            color: $black;
+            font-family: $fontSansNarrowBold;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 11.93px;
+            border-radius: 3px;
+          }
+          &item.deactivate {
+            box-shadow: 0 2px 3px rgba(27, 27, 27, 0.55),
+              inset 0 1px 2px rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          &title {
+            color: $white;
+            font-family: $fontSansNarrow;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 19px;
+            margin: 12px 0 0 16px;
+            display: inline-block;
+          }
+        }
+      }
+      .feedback__form__wrapper {
+        width: 289px;
+        margin-left: 10px;
+        height: 410px;
+        box-shadow: 0 0 40px rgba(254, 213, 91, 0.25);
+        border-radius: 10px;
+        background-color: $white;
+        .header__form {
+          height: 116px;
+          display: grid;
+          grid-template-columns: 154px 1fr;
+          background: $feedbackFormGray url("../img/feedback_header_bckg.png") 0px 0px
+            no-repeat;
+          .old-price {
+            background: $feedbackFormGray url("../img/feedback_form_backg-disable.png")
+              right top no-repeat;
+            .price-title,
+            .price-text,
+            .price-sub {
+              opacity: 0.3;
+            }
+          }
+          .old-price,
+          .new-price,
+          .price {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .price-text__wrapper,
+          .price-title {
+            font-size: 18px;
+            color: $white;
+            font-family: $fontSansNarrow;
+            font-weight: 400;
+            margin: 0;
+            .price- {
+              &text,
+              &sub {
+                font-size: 48px;
+                line-height: 48px;
+                text-decoration: line-through;
+              }
+              &sub {
+                font-size: 24px;
+                text-decoration: none;
+              }
+            }
+          }
+          .new-price {
+            margin: 17px 0 0 13px;
+          }
+          .old-price {
+            padding: 15px 0 0 23px;
+          }
+        }
+        .feedback__form {
+          .input__name,
+          .input__phone {
+            width: 255px;
+            box-sizing: border-box;
+            display: block;
+            height: 55px;
+            border-radius: 5px;
+            border: 1px solid $feedbackFormBorder;
+            background-color: $feedbackFormBackground;
+            &__ {
+              &wrapper {
+              }
+            }
+            padding-left: 15px;
+            font-family: $fontSansRegular;
+            font-size: 14px;
+            font-weight: 400;
+            &::placeholder {
+              color: $feedbackFormPlaceholder;
+              font-family: $fontSansRegular;
+              font-size: 14px;
+              font-weight: 400;
+            }
+            &:focus {
+              border-color: $feedbackFormBorder;
+              outline: none;
+            }
+          }
+          .input__name {
+            margin: 20px auto 15px;
+          }
+          .input__phone {
+            margin: 15px auto 25px;
+          }
+          .order-now__button {
+            width: 255px;
+            display: flex;
+            height: 60px;
+            margin: 0 auto;
+            border: 0 solid;
+            align-items: center;
+            padding: 0;
+            box-sizing: border-box;
+            box-shadow: 3px 4px 25px rgba(250, 74, 27, 0.35);
+            border-radius: 5px;
+            background-image: $orderBtnBackground;
+            .order-now__arrow {
+              width: 51px;
+              height: 60px;
+              border-radius: 5px 0 0 5px;
+              background-color: $orderBtnArrowBackgColor;
+              background: $orderBtnArrowBackgColor url("../img/arrow-right.png") center center
+                no-repeat;
+            }
+            .order-now__text {
+              color: $white;
+              font-family: $fontSansNarrowBold;
+              font-size: 22px;
+              margin-left: 22px;
+              font-weight: 400;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .footer__form {
+          text-align: center;
+          margin-top: 23px;
+          &__ {
+            &icon {
+              background: $white url("../img/lock-icon.png") 0px 0px no-repeat;
+              background-size: 13px 17px;
+              display: inline-block;
+              width: 13px;
+              height: 17px;
+              margin-right: 8px;
+            }
+            &text {
+              color: $black;
+              font-family: $fontSansNarrow;
+              font-size: 15px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
