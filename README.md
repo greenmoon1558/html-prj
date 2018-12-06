@@ -1,6 +1,6 @@
 [link to netlify](https://infallible-minsky-540b0e.netlify.com/)
 
-![LAYOUT.png](https://raw.githubusercontent.com/greenmoon1558/html-project1/master/pantomax_lp_new.psd.png)
+![LAYOUT.png](https://github.com/greenmoon1558/html-prj/blob/master/pantomax_lp_new.psd.png)
 
 ## Project setup
 ```
