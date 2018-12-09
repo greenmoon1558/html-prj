@@ -1,59 +1,85 @@
-
-    .header{
-        height: 105px;
-        &__{
-            &page-wrapper{
-                @include  page-block__container();
-                display: grid;
-                padding-top: 24px;
-                grid-template-rows: 50px;
-                grid-template-columns: 330px repeat(2, 236px) 1fr;
-            }
-            &item{
-                display: grid;
-                align-items: center;
-                grid-template-rows: 1fr;
-                grid-column-gap: 8px;
-                justify-items: end;
-                grid-template-columns: 45px 1fr;
-            }
-            &title{
-                font-size: 18px;
-                line-height: 23.29px;
-                font-family: $fontSansRegular;
-                font-weight: 400;
-                align-items: center;
-                justify-self: start;
-                display: inline-block;
-                margin: 0;
-                color: $whiteText;
-                &--bold{
-                    font-size: 24px;
-                    font-weight: 700;
-                    font-family: $fontSansBold;
-                }
-            }   
-            &img{
-                height: 37px;
-            }
-            &logo.logo{
-                display: grid;
-                grid-column-gap: 14px;
-                align-items: center;
-                grid-template-columns: 44px 1fr;
-            }
-        }
-           
-        .logo{
-            &__{
-                &title__img{
-                    width: 200px;
-                    height: 44px;
-                }
-                &img{
-                    width: 45px;
-                    height: 50px;
-                }
-            }
-        }
+.header {
+  height: 105px;
+  &__ {
+    &page-wrapper {
+      @include page-block__container();
+      display: grid;
+      padding-top: 24px;
+      grid-template-rows: 50px;
+      grid-template-columns: 330px repeat(2, 236px) 1fr;
     }
+    &item {
+      display: grid;
+      align-items: center;
+      grid-template-rows: 1fr;
+      grid-column-gap: 8px;
+      justify-items: end;
+      grid-template-columns: 45px minmax(105px, 1fr);
+    }
+    &title {
+      font-size: 18px;
+      line-height: 23.29px;
+      font-family: $fontSansRegular;
+      font-weight: 400;
+      align-items: center;
+      justify-self: start;
+      display: inline-block;
+      margin: 0;
+      color: $whiteText;
+      &--bold {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: $fontSansBold;
+      }
+    }
+    &img {
+      height: 37px;
+    }
+    &logo.logo {
+      display: grid;
+      grid-column-gap: 14px;
+      align-items: center;
+      grid-template-columns: 44px 1fr;
+    }
+  }
+
+  .logo {
+    &__ {
+      &title__img {
+        width: 200px;
+        height: 44px;
+      }
+      &img {
+        width: 45px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 980px) {
+  .header__page-wrapper {
+    grid-template-columns: minmax(33%, 330px) repeat(
+        2,
+        minmax(min-content, 1fr)
+      );
+  }
+}
+@media all and (max-width: 576px) {
+  .header {
+    height: auto;
+  }
+  .header__page-wrapper {
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    grid-template-rows: repeat(2, 50px);
+  }
+  .header__logo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .header__item {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}

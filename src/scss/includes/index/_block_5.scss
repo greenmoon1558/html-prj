@@ -1,6 +1,7 @@
 .block-5 {
   @include page-block__container();
   margin: -33px auto 0;
+  padding-bottom: 9px;
   .block-wrapper {
     background-color: $white;
     height: 443px;
@@ -8,7 +9,7 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: -18px, 0px;
-    background-image: url("../img/doctor.png"), url("../img/block-5-bckg.png");
+    background-image: url("../img/doctor.png"), url("../img/block-5-bckg.jpg");
     .main-title {
       color: $black;
       font-family: $fontSansNarrowBold;
@@ -56,5 +57,19 @@
         }
       }
     }
+  }
+}
+
+@media all and (max-width: 980px) {
+  .block-5 {
+    max-width: 90vw;
+     .block-wrapper {
+       height: auto;
+       background-image: none;
+       .container {
+         width: calc( 100% - 40px );
+         margin: 0 20px;
+       }
+     }
   }
 }
